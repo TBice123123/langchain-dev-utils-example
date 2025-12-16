@@ -54,7 +54,7 @@ uv sync
 cp .env.example .env
 ```
 
-Edit the `.env` file to add your API keys:
+Edit the `.env` file to add your API keys(need `OpenRouter` and `Tavily` API keys)
 ```
 OPENROUTER_API_KEY=your_openrouter_api_key
 TAVILY_API_KEY=your_tavily_api_key
@@ -62,7 +62,7 @@ TAVILY_API_KEY=your_tavily_api_key
 
 ## Usage
 
-### Running Agents via LangGraph CLI
+### Running with LangGraph CLI
 
 The project is configured to be compatible with the LangGraph CLI. Start an agent using the following command:
 

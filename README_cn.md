@@ -54,7 +54,7 @@ uv sync --all-groups
 cp .env.example .env
 ```
 
-编辑 `.env` 文件，添加您的 API 密钥：
+编辑 `.env` 文件，添加您的 API 密钥(需要 `OpenRouter` 和 `Tavily` API 密钥)
 ```
 OPENROUTER_API_KEY=your_openrouter_api_key
 TAVILY_API_KEY=your_tavily_api_key
@@ -62,7 +62,7 @@ TAVILY_API_KEY=your_tavily_api_key
 
 ## 使用方法
 
-### 通过 LangGraph CLI 运行代理
+### 通过 LangGraph CLI 运行
 
 项目已配置为与 LangGraph CLI 兼容。使用以下命令启动代理：
 

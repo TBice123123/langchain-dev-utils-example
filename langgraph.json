@@ -1,7 +1,6 @@
 {
     "dependencies": [
-        ".",
-        "./lib"
+        "."
     ],
     "graphs": {
         "agent": "./src/agents/simple_agent/agent.py:agent",
