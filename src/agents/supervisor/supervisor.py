@@ -1,39 +1,39 @@
 from langchain.agents import create_agent
 from langchain_dev_utils.agents import wrap_agent_as_tool
 
-from lib.models import load_chat_model
-from src.agents.supervisor.subagent import calendar_agent, email_agent
+from src.agents.supervisor.subagent import search_agent, weather_agent
+from src.utils.models import load_chat_model
 
 
-schedule_event = wrap_agent_as_tool(
-    calendar_agent,
-    "schedule_event",
-    tool_description="""Schedule calendar events using natural language.
+search_agent_tool = wrap_agent_as_tool(
+    search_agent,
+    "call_search_subagent",
+    tool_description="""Search the internet for the query.
 
-    Use this when the user wants to create, modify, or check calendar appointments.
-    Handles date/time parsing, querying availability, and creating events.
+    Use this when the user wants to search the internet for a specific query.
+    It can extract the query from the user's request and return the search results.
 
-    Input: natural-language calendar scheduling request (e.g. 'meeting with design team next Tuesday at 2 PM')
+    Input: natural-language search query (e.g. 'search for the latest news on AI')  
     """,
 )
-manage_email = wrap_agent_as_tool(
-    email_agent,
-    "manage_email",
-    tool_description="""Send emails using natural language.
 
-    Use this when the user wants to send notifications, reminders, or any email communication.
-    It can extract recipient information, generate subject lines, and compose email content.
+weather_agent_tool = wrap_agent_as_tool(
+    weather_agent,
+    "call_weather_subagent",
+    tool_description="""Get the current weather in a city.
 
-    Input: natural-language email request (e.g., 'send them a meeting reminder')f
+    Use this when the user wants to check the weather in a specific city.
+    It can extract the city name from the user's request and return the current weather conditions.
+
+    Input: natural-language weather request (e.g. 'weather in London')  
     """,
 )
 
 
 SUPERVISOR_PROMPT = (
     "You are a helpful personal assistant. "
-    "You can schedule calendar events and send emails. "
-    "Break down user requests into appropriate tool calls and coordinate the results. "
-    "When a request involves multiple actions, use multiple tools in sequence."
+    "If the user's question is about weather or searching the internet, you can use the corresponding sub-agents to provide the information."
+    "Otherwise, you can answer the question directly."
 )
 
 model = load_chat_model(
@@ -41,5 +41,8 @@ model = load_chat_model(
 )
 
 supervisor_agent = create_agent(
-    model, tools=[schedule_event, manage_email], system_prompt=SUPERVISOR_PROMPT
+    model,
+    tools=[search_agent_tool, weather_agent_tool],
+    system_prompt=SUPERVISOR_PROMPT,
+    name="supervisor_agent",
 )

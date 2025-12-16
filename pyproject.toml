@@ -7,6 +7,7 @@ requires-python = ">=3.11"
 dependencies = [
     "langchain>=1.2.0",
     "langchain-dev-utils[standard]>=1.2.16",
+    "langchain-tavily>=0.2.15",
 ]
 
 [dependency-groups]

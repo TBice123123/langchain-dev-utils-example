@@ -1,4 +1,4 @@
-# LangChain Development Tools Example Project
+# Langchain-dev-utils Example Project
 
 ## Project Overview
 
@@ -8,33 +8,32 @@ This example project demonstrates how to leverage tools and abstractions provide
 - **Supervisor-Multi-Agent Architecture**: Coordinates multiple specialized agents through a central supervisor, ideal for complex scenarios requiring task division, planning, and iterative refinement.
 
 ## Project Structure
-
 ```
 langchain-dev-utils-example/
-├── lib/                          # Library modules
-│   ├── __init__.py               # Library initialization
-│   ├── models.py                 # Model definitions and utilities
-│   └── register.py               # Model provider registration
-├── src/                          # Source code
-│   └── agents/                   # Agent implementations
-│       ├── __init__.py           # Agents module initialization
-│       ├── simple_agent/         # Simple agent example
-│       │   ├── __init__.py       # Simple agent module initialization
-│       │   ├── agent.py          # Simple agent definition
-│       │   └── context.py        # Context schema definition
-│       └── supervisor/           # Supervisor-multi-agent architecture
-│           ├── __init__.py       # Supervisor module initialization
-│           ├── supervisor.py     # Supervisor agent
-│           └── subagent.py       # Specialized sub-agents
-├── .env.example                  # Environment variable template
-├── .gitignore                    # Git ignore file
-├── .python-version               # Python version specification
-├── LICENSE                       # MIT License
-├── README.md                     # This file
-├── README_cn.md                  # Chinese version of README
-├── langgraph.json               # LangGraph configuration
-├── pyproject.toml               # Project dependencies
-└── uv.lock                      # Dependency lock file
+├── src/                          
+│   ├── agents/                   
+│   │   ├── __init__.py           
+│   │   ├── simple_agent/        
+│   │   │   ├── __init__.py       
+│   │   │   ├── agent.py         
+│   │   │   └── context.py        
+│   │   └── supervisor/           
+│   │       ├── __init__.py       
+│   │       ├── supervisor.py    
+│   │       └── subagent.py      
+│   └── utils/                    
+│       ├── __init__.py           
+│       ├── models.py             
+│       └── register.py          
+├── .env.example                  
+├── .gitignore                    
+├── .python-version               
+├── LICENSE                       
+├── README.md                     
+├── README_cn.md                  
+├── langgraph.json               
+├── pyproject.toml               
+└── uv.lock                    
 ```
 
 ## Installation Steps
@@ -58,6 +57,7 @@ cp .env.example .env
 Edit the `.env` file to add your API keys:
 ```
 OPENROUTER_API_KEY=your_openrouter_api_key
+TAVILY_API_KEY=your_tavily_api_key
 ```
 
 ## Usage

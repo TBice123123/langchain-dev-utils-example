@@ -1,4 +1,4 @@
-# LangChain 开发工具示例项目
+# Langchain-dev-utils 示例项目
 
 ## 项目概述
 
@@ -10,30 +10,30 @@
 
 ```
 langchain-dev-utils-example/
-├── lib/                          # 库模块
-│   ├── __init__.py               # 库初始化
-│   ├── models.py                 # 模型定义和工具
-│   └── register.py               # 模型提供商注册
-├── src/                          # 源代码
-│   └── agents/                   # 代理实现
-│       ├── __init__.py           # 代理模块初始化
-│       ├── simple_agent/         # 简单智能体示例
-│       │   ├── __init__.py       # 简单代理模块初始化
-│       │   ├── agent.py          # 简单代理定义
-│       │   └── context.py        # 上下文模式定义
-│       └── supervisor/           # 主管多智能体架构
-│           ├── __init__.py       # 主管模块初始化
-│           ├── supervisor.py     # 主管智能体
-│           └── subagent.py       # 专业化子智能体
-├── .env.example                  # 环境变量模板
-├── .gitignore                    # Git 忽略文件
-├── .python-version               # Python 版本规范
-├── LICENSE                       # MIT 许可证
-├── README.md                     # 英文版说明文件
-├── README_cn.md                  # 中文版说明文件
-├── langgraph.json               # LangGraph 配置
-├── pyproject.toml               # 项目依赖
-└── uv.lock                      # 依赖锁定文件
+├── src/                          
+│   ├── agents/                   
+│   │   ├── __init__.py           
+│   │   ├── simple_agent/        
+│   │   │   ├── __init__.py       
+│   │   │   ├── agent.py         
+│   │   │   └── context.py        
+│   │   └── supervisor/           
+│   │       ├── __init__.py       
+│   │       ├── supervisor.py    
+│   │       └── subagent.py      
+│   └── utils/                    
+│       ├── __init__.py           
+│       ├── models.py             
+│       └── register.py          
+├── .env.example                  
+├── .gitignore                    
+├── .python-version               
+├── LICENSE                       
+├── README.md                     
+├── README_cn.md                  
+├── langgraph.json               
+├── pyproject.toml               
+└── uv.lock                    
 ```
 
 ## 安装步骤
@@ -57,6 +57,7 @@ cp .env.example .env
 编辑 `.env` 文件，添加您的 API 密钥：
 ```
 OPENROUTER_API_KEY=your_openrouter_api_key
+TAVILY_API_KEY=your_tavily_api_key
 ```
 
 ## 使用方法
