@@ -1,0 +1,10 @@
+{
+    "dependencies": [
+        ".",
+        "./lib"
+    ],
+    "graphs": {
+        "agent": "./src/agents/simple_agent/agent.py:agent",
+        "supervisor": "./src/agents/supervisor/supervisor.py:supervisor_agent"
+    }
+}
