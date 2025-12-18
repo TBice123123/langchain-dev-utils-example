@@ -4,6 +4,16 @@
     ],
     "graphs": {
         "agent": "./src/agents/simple_agent/agent.py:agent",
-        "supervisor": "./src/agents/supervisor/supervisor.py:supervisor_agent"
+        "supervisor": "./src/agents/supervisor/agent.py:supervisor_agent"
+    },
+    "env": ".env",
+    "store": {
+        "index": {
+            "embed": "./src/agents/embedding_fn.py:embed",
+            "dims": 1024,
+            "fields": [
+                "content"
+            ]
+        }
     }
 }

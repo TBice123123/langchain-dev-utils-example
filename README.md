@@ -1,46 +1,19 @@
 # Langchain-dev-utils Example Project
 
-## Project Overview
+This repository provides an example project demonstrating how to efficiently build two typical agent systems using the utility functions provided by `langchain-dev-utils`:
 
-This example project demonstrates how to leverage tools and abstractions provided by `langchain-dev-utils` to efficiently build two typical types of agent systems:
+- **Single Agent**: Suitable for executing simple tasks and tasks related to long-term memory storage.
+- **Supervisor-Multi-Agent Architecture**: Coordinates multiple specialized agents through a central supervisor, applicable to complex scenarios requiring task decomposition, planning, and iterative optimization.
 
-- **Single Agent**: Suitable for end-to-end automation of simple tasks.
-- **Supervisor-Multi-Agent Architecture**: Coordinates multiple specialized agents through a central supervisor, ideal for complex scenarios requiring task division, planning, and iterative refinement.
+<p align="center">
+  <img src="./assets/image.png" alt="graph">
+</p>
 
-## Project Structure
-```
-langchain-dev-utils-example/
-├── src/                          
-│   ├── agents/                   
-│   │   ├── __init__.py           
-│   │   ├── simple_agent/        
-│   │   │   ├── __init__.py       
-│   │   │   ├── agent.py         
-│   │   │   └── context.py        
-│   │   └── supervisor/           
-│   │       ├── __init__.py       
-│   │       ├── supervisor.py    
-│   │       └── subagent.py      
-│   └── utils/                    
-│       ├── __init__.py           
-│       ├── models.py             
-│       └── register.py          
-├── .env.example                  
-├── .gitignore                    
-├── .python-version               
-├── LICENSE                       
-├── README.md                     
-├── README_cn.md                  
-├── langgraph.json               
-├── pyproject.toml               
-└── uv.lock                    
-```
-
-## Installation Steps
+## Quickstart
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/TBice123123/langchain-dev-utils-example.git
+git clone https://github.com/TBice123123/langchain-dev-utils-example.git  
 cd langchain-dev-utils-example
 ```
 
@@ -49,27 +22,18 @@ cd langchain-dev-utils-example
 uv sync
 ```
 
-3. Configure environment variables:
+3. Create .env file:
 ```bash
 cp .env.example .env
 ```
 
-Edit the `.env` file to add your API keys(need `OpenRouter` and `Tavily` API keys)
-```
-OPENROUTER_API_KEY=your_openrouter_api_key
-TAVILY_API_KEY=your_tavily_api_key
-```
+4. Edit the `.env` file and enter your API keys (API keys for `OpenRouter` and `Tavily` are required)
 
-## Usage
-
-### Running with LangGraph CLI
-
-The project is configured to be compatible with the LangGraph CLI. Start an agent using the following command:
-
+5. Start the project:
 ```bash
 langgraph dev
 ```
 
-## Contribution Guidelines
+## Contributing Guidelines
 
-This project is open-source under the MIT License. Community contributions are welcome! Feel free to submit Pull Requests or create Issues to discuss improvements or suggestions.
+This project is open source under the MIT license. Community contributions are welcome! You can submit Pull Requests or create Issues to discuss improvement suggestions or ideas.

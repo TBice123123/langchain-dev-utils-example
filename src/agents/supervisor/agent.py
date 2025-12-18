@@ -1,8 +1,8 @@
 from langchain.agents import create_agent
 from langchain_dev_utils.agents import wrap_agent_as_tool
 
-from src.agents.supervisor.subagent import search_agent, weather_agent
-from src.utils.models import load_chat_model
+from src.agents.supervisor.subagent.agent import search_agent, weather_agent
+from src.utils.providers import load_chat_model
 
 
 search_agent_tool = wrap_agent_as_tool(

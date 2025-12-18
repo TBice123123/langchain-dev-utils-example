@@ -1,79 +1,38 @@
-# Langchain-dev-utils 示例项目
+# Langchain-dev-utils Example Project
 
-## 项目概述
+该仓库提供了一个示例项目，演示了如何利用 `langchain-dev-utils` 提供的工具函数，高效构建两种典型的智能体（agent）系统：
 
-本示例项目演示了如何利用 `langchain-dev-utils` 提供的工具与抽象，高效构建两类典型智能体系统：
-- **单智能体（Simple Agent）**：适用于端到端的简单任务自动化。
-- **主管-多智能体架构（Supervisor-Multi-Agent）**：通过一个主管协调多个专业智能体，适用于需分工、规划与迭代的复杂场景。
+- **单智能体（Single Agent）**：适用于执行简单任务以及长期记忆存储相关的任务。
+- **监督者-多智能体架构（Supervisor-Multi-Agent Architecture）**：通过一个中央监督者协调多个专业化智能体，适用于需要任务分解、规划和迭代优化的复杂场景。
 
-## 项目结构
 
-```
-langchain-dev-utils-example/
-├── src/                          
-│   ├── agents/                   
-│   │   ├── __init__.py           
-│   │   ├── simple_agent/        
-│   │   │   ├── __init__.py       
-│   │   │   ├── agent.py         
-│   │   │   └── context.py        
-│   │   └── supervisor/           
-│   │       ├── __init__.py       
-│   │       ├── supervisor.py    
-│   │       └── subagent.py      
-│   └── utils/                    
-│       ├── __init__.py           
-│       ├── models.py             
-│       └── register.py          
-├── .env.example                  
-├── .gitignore                    
-├── .python-version               
-├── LICENSE                       
-├── README.md                     
-├── README_cn.md                  
-├── langgraph.json               
-├── pyproject.toml               
-└── uv.lock                    
-```
+<p align="center">
+  <img src="./assets/image.png" alt="graph">
+</p>
 
-## 安装步骤
 
-1. 克隆此仓库：
+## 快速开始
+
+1. 克隆本仓库：
 ```bash
-git clone https://github.com/TBice123123/langchain-dev-utils-example.git
+git clone https://github.com/TBice123123/langchain-dev-utils-example.git  
 cd langchain-dev-utils-example
 ```
-
 2. 使用 uv 安装依赖：
 ```bash
-uv sync --all-groups
+uv sync
 ```
-
-3. 配置环境变量：
+3. 创建.env文件
 ```bash
 cp .env.example .env
 ```
+4. 编辑 `.env` 文件，填入你的 API 密钥（需要 `OpenRouter` 和 `Tavily` 的 API 密钥）
 
-编辑 `.env` 文件，添加您的 API 密钥(需要 `OpenRouter` 和 `Tavily` API 密钥)
-```
-OPENROUTER_API_KEY=your_openrouter_api_key
-TAVILY_API_KEY=your_tavily_api_key
-```
-
-## 使用方法
-
-### 通过 LangGraph CLI 运行
-
-项目已配置为与 LangGraph CLI 兼容。使用以下命令启动代理：
-
+5. 启动项目
 ```bash
 langgraph dev
 ```
 
 ## 贡献指南
 
-项目以 MIT 许可证开源，欢迎社区贡献！请随时提交 Pull Request 或创建 Issue 来讨论改进建议。
-
-
-
-
+本项目采用 MIT 许可证开源。欢迎社区贡献！你可以提交 Pull Request，或创建 Issue 来讨论改进建议或想法。
