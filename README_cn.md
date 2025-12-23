@@ -26,7 +26,9 @@ uv sync
 ```bash
 cp .env.example .env
 ```
-4. 编辑 `.env` 文件，填入你的 API 密钥（需要 `OpenRouter` 和 `Tavily` 的 API 密钥）
+4. 编辑 `.env` 文件，填入你的 API 密钥（需要 `ZhipuAI` 和 `Tavily` 的 API 密钥）。
+   - 中国开发者需要使用`ZhipuAI`的此URL：`https://open.bigmodel.cn/api/paas/v4/`
+
 
 5. 启动项目
 ```bash

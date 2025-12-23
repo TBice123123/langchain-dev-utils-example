@@ -3,9 +3,7 @@ from langchain.agents import create_agent
 from src.agents.supervisor.subagent.tools import get_current_weather, search_tool
 from src.utils.providers import load_chat_model
 
-model = load_chat_model(
-    "openrouter:qwen/qwen-plus",
-)
+model = load_chat_model("zai:glm-4.5", thinking=False)
 
 
 WEATHER_AGENT_PROMPT = (

@@ -1,7 +1,7 @@
 from src.utils.providers import load_embeddings
 
 
-embeddings = load_embeddings("openrouter:qwen/qwen3-embedding-8b", dimensions=1024)
+embeddings = load_embeddings("zai:embedding-3", dimensions=1024)
 
 
 def embed(texts: list[str]) -> list[list[float]]:

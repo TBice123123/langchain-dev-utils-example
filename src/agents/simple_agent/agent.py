@@ -7,7 +7,9 @@ from src.agents.simple_agent.tools import get_user_memory
 from src.utils.providers import load_chat_model
 
 model = load_chat_model(
-    "openrouter:qwen/qwen3-max",
+    "zai:glm-4.7",
+    thinking=True,
+    reasoning_keep_policy="current",
 )
 
 

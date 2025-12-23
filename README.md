@@ -27,7 +27,8 @@ uv sync
 cp .env.example .env
 ```
 
-4. Edit the `.env` file and enter your API keys (API keys for `OpenRouter` and `Tavily` are required)
+4. Edit the `.env` file and enter your API keys (API keys for `ZhipuAI` and `Tavily` are required)
+   - Chinese developers need to use this URL for `ZhipuAI`: `https://open.bigmodel.cn/api/paas/v4/`
 
 5. Start the project:
 ```bash

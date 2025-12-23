@@ -36,9 +36,7 @@ SUPERVISOR_PROMPT = (
     "Otherwise, you can answer the question directly."
 )
 
-model = load_chat_model(
-    "openrouter:qwen/qwen3-max",
-)
+model = load_chat_model("zai:glm-4.6", thinking=True)
 
 supervisor_agent = create_agent(
     model,
