@@ -33,3 +33,20 @@ search_agent = create_agent(
     system_prompt=SEARCH_AGENT_PROMPT,
     name="search_agent",
 )
+
+
+VISION_AGENT_PROMPT = (
+    "You are a vision assistant. "
+    "Analyze and understand visual content from images. "
+    "Provide detailed and accurate descriptions of what you see in the image. "
+    "Answer questions based on the visual information. "
+    "Focus on key elements, objects, scenes, text, and any relevant details. "
+    "Be specific and comprehensive in your visual analysis."
+)
+
+vision_model = load_chat_model("zai:glm-4.6v")
+vision_agent = create_agent(
+    vision_model,
+    system_prompt=VISION_AGENT_PROMPT,
+    name="vision_agent",
+)
