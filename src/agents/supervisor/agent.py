@@ -95,7 +95,7 @@ SUPERVISOR_PROMPT = (
     "Do NOT attempt to handle image-related tasks yourself."
 )
 
-model = load_chat_model("zai:glm-4.6", thinking=True)
+model = load_chat_model("zai:glm-5", thinking=True)
 
 supervisor_agent = create_agent(
     model,

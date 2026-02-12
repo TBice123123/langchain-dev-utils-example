@@ -15,7 +15,6 @@ def save_user_memory(content: str, runtime: ToolRuntime[AssistantContext]) -> st
     Args:
         content: The memory content to save
 
-
     Returns:
         A string with success message
     """

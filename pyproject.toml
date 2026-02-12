@@ -16,3 +16,4 @@ dev = ["langgraph-cli[inmem]>=0.4.10", "ruff>=0.14.9"]
 [[tool.uv.index]]
 url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
 default = true
+

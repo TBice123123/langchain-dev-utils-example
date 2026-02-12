@@ -7,7 +7,7 @@ from src.agents.simple_agent.tools import get_user_memory
 from src.utils.providers import load_chat_model
 
 model = load_chat_model(
-    "zai:glm-4.7",
+    "zai:glm-5",
     thinking=True,
     reasoning_keep_policy="current",
 )
