@@ -4,7 +4,8 @@
     ],
     "graphs": {
         "agent": "./src/agents/simple_agent/agent.py:agent",
-        "supervisor": "./src/agents/supervisor/agent.py:supervisor_agent"
+        "supervisor": "./src/agents/supervisor/agent.py:supervisor_agent",
+        "handoffs": "./src/agents/handoffs/agent.py:agent"
     },
     "env": ".env",
     "store": {

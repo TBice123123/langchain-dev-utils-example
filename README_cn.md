@@ -1,9 +1,10 @@
 # Langchain-dev-utils Example Project
 
-该仓库提供了一个示例项目，演示了如何利用 `langchain-dev-utils` 提供的工具函数，高效构建两种典型的智能体（agent）系统：
+该仓库提供了一个示例项目，演示了如何利用 `langchain-dev-utils` 提供的工具函数，高效构建三种典型的智能体（agent）系统：
 
 - **单智能体（Single Agent）**：适用于执行简单任务以及长期记忆存储相关的任务。
 - **监督者-多智能体架构（Supervisor-Multi-Agent Architecture）**：通过一个中央监督者协调多个专业化智能体，适用于需要任务分解、规划和迭代优化的复杂场景。
+- **交接架构（Handoffs Architecture）**：每个智能体负责特定任务，并在需要时将控制权转移给其他智能体。
 
 
 <p align="center">

@@ -1,11 +1,17 @@
+from typing import Annotated
 from langchain_core.tools import tool
 from langchain_tavily import TavilySearch
+import warnings
 
-
-search_tool = TavilySearch(max_results=2)
+warnings.filterwarnings("ignore")
 
 
 @tool
-def get_current_weather(city: str) -> str:
-    """Get the current weather in a city."""
-    return f"In {city}, 20°C, Clear sky"
+def search_tool(
+    query: Annotated[
+        str, "The search query. Use clear keywords instead of full sentences."
+    ],
+) -> str:
+    """A search engine for finding current information, news, and web content."""
+    search_tool = TavilySearch()
+    return search_tool.invoke({"query": query})

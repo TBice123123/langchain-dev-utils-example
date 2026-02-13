@@ -1,9 +1,10 @@
 # Langchain-dev-utils Example Project
 
-This repository provides an example project demonstrating how to efficiently build two typical agent systems using the utility functions provided by `langchain-dev-utils`:
+This repository provides an example project demonstrating how to efficiently build three typical agent systems using the utility functions provided by `langchain-dev-utils`:
 
 - **Single Agent**: Suitable for executing simple tasks and tasks related to long-term memory storage.
 - **Supervisor-Multi-Agent Architecture**: Coordinates multiple specialized agents through a central supervisor, applicable to complex scenarios requiring task decomposition, planning, and iterative optimization.
+- **Handoffs Architecture**: Each agent handles a specific task and can transfer control to other agents when needed.
 
 <p align="center">
   <img src="./assets/image.png" alt="graph">
